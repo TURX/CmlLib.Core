@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netcoreapp3.1;net462;net5.0</TargetFrameworks>
+    <TargetFramework>net5.0</TargetFramework>
     <Version>3.1.0</Version>
     <Description>Minecraft Launcher Library for .NET Core and .NET Framework
 Support All versions, forge, optifine
@@ -10,18 +10,19 @@ see github to learn how to use</Description>
     <PackageProjectUrl>https://github.com/AlphaBs/CmlLib.Core</PackageProjectUrl>
     <RepositoryUrl>https://github.com/AlphaBs/CmlLib.Core</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <PackageTags>Minecraft Launcher forge optifine .NET Core Crossplatform C#</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Authors>AlphaBs</Authors>
-    <PackageReleaseNotes />
     <PackageId>CmlLib.Core</PackageId>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="LZMA-SDK" Version="19.0.0" />
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
-    <PackageReference Include="SharpZipLib" Version="1.2.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\Newtonsoft.Json\Src\Newtonsoft.Json\Newtonsoft.Json.csproj" />
+    <ProjectReference Include="..\..\SharpZipLib\src\ICSharpCode.SharpZipLib\ICSharpCode.SharpZipLib.csproj" />
+  </ItemGroup>
 </Project>
