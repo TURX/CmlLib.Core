@@ -155,7 +155,7 @@ namespace CmlLib.Core
         public Process CreateProcess(string versionname, MLaunchOption option)
         {
             option.StartVersion = GetVersion(versionname);
-            CheckGameFiles(option.StartVersion);
+            // CheckGameFiles(option.StartVersion);
             return CreateProcess(option);
         }
 
